@@ -19,10 +19,20 @@ If you do not have Python installed yet, it is highly recommended that you insta
 ### Short Description of Each Source Code File
 1. **siamese_augmentation.py**- As the input in the siamese network needs to be given as duplets of positive examples (same class) or negative examples (different class), I was unable to use the Keras image augmentation method. So, I wrote the **siamese_augmentation.py** file. This file and its function are responsible for the augmentation of the input duplets in the training data. Example of a positive duplet image. 
 <p align="center">
-  <img src="images/image_augmentation_example.png.png" width=175>
+  <img src="images/image_augmentation_example.png" width=375>
 </p>
 
-2. **siamese_function.py**
-3. **siamese_model.py**
+2. **siamese_function.py**- This file is responsible for creating duplets from the data. First of all image folders are randomly sampled from the data. Then the sampled folder images are loaded in the NumPy array. Images are loaded in RGB format. From the image data, it will generate batches of positive duplets and negative duplets continuously. This file is also responsible for the visualization of duplets, if necessary.
+
+3. **siamese_model.py**- The siamese network I used have almost 13M trainable parameter. The CNN architecture used in this repository is similar to the [VGG16](https://arxiv.org/pdf/1409.1556.pdf) but the model I used has less trainable params(13M) compared to the original VGG16(138.4M) model and the model I used also have BatchNormalization layers for regularization purposes. Written in [this medium article](https://medium.com/swlh/siamese-network-for-facial-recognition-5bd33be9e381) about siamese network and visualizing its general architecture. 
+
+>"Siamese Network is a One-shot classifier with two mirror-image subnetworks to rank similarity or dissimilarity between the two inputs using Similarity score."
+
+<p align="center">
+  <img src="images/siamese_model.png" width=500>
+</p>
+
+
 4. **siamese_testdata.py**
+
 5. **siamese_enroll.py**
