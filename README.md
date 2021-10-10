@@ -1,6 +1,7 @@
 # Human Face Verification with One-shot Learning Using Siamese Neural Network
 A Siamese neural network (sometimes called a twin neural network) is an artificial neural network that uses the same weights while working in tandem on two different input vectors to compute comparable output vectors [[From WIKI]](https://en.wikipedia.org/wiki/Siamese_neural_network). In the modern Deep learning era, Neural networks are almost good at every task, but these neural networks rely on more data to perform well. But, for certain problems like face recognition and signature verification, we can’t always rely on getting more data, to solve this kind of task we have a new type of neural network architecture called Siamese Networks. It uses only a few numbers of images to get better predictions. The ability to learn from very little data made Siamese networks more popular in recent years [[From Towards Data Science]](https://towardsdatascience.com/a-friendly-introduction-to-siamese-networks-85ab17522942). This repository contains my solution to human face verification with [One-shot learning](https://en.wikipedia.org/wiki/One-shot_learning) using siamese neural network. The dataset used for this problem is the [Celebrities in Frontal-Profile in the Wild (CFPW dataset)](http://www.cfpw.io/).
 
+
 ### Required Package
 This project requires **Python** and the following Python packages:
 - [NumPy](https://www.numpy.org/)
@@ -12,6 +13,7 @@ This project requires **Python** and the following Python packages:
 - [os](https://docs.python.org/3/library/os.html)
 
 If you do not have Python installed yet, it is highly recommended that you install the [Anaconda](https://www.anaconda.com/) distribution of Python, which already has most of the above packages. 
+
 
 ### Splitting CFPW Dataset
 [CFPW dataset](http://www.cfpw.io/) contains images of celebrities in frontal and profile views. There are 500 celebrities' images in 500 folders. All of the folders have 10 frontal view images and 4 profile view images, so a total of 14 images are in each and every folder. For training the siamese neural network I randomly choose 350 folders and for the validation set, I randomly choose 100 folders and, the rest of the 50 folders were kept for the test set. The test set remained isolated the whole time, I just it at last just to verify if my model has accuracy in the out-of-sample examples.
@@ -59,3 +61,11 @@ Learning rate decay graph <br />
 <p align="center">
   <img src="images/learning_rate_decay.png" width=750>
 </p>
+
+
+### Reference
+- [Learning a Similarity Metric Discriminatively, with Application to Face Verification](http://yann.lecun.com/exdb/publis/pdf/chopra-05.pdf)
+- [Siamese Neural Networks for One-shot Image Recognition](https://www.cs.cmu.edu/~rsalakhu/papers/oneshot1.pdf)
+- [Siamese Network for Facial Recognition](https://medium.com/swlh/siamese-network-for-facial-recognition-5bd33be9e381)
+- [VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE-SCALE IMAGE RECOGNITION](https://arxiv.org/pdf/1409.1556.pdf)
+- [One Shot Learning with Siamese Networks using Keras](https://towardsdatascience.com/one-shot-learning-with-siamese-networks-using-keras-17f34e75bb3d)
