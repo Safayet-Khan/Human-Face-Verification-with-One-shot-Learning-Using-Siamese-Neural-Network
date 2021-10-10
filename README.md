@@ -13,7 +13,7 @@ This project requires **Python** and the following Python packages:
 
 If you do not have Python installed yet, it is highly recommended that you install the [Anaconda](https://www.anaconda.com/) distribution of Python, which already has most of the above packages. 
 
-### Splitting CFPW dataset
+### Splitting CFPW Dataset
 [CFPW dataset](http://www.cfpw.io/) contains images of celebrities in frontal and profile views. There are 500 celebrities' images in 500 folders. All of the folders have 10 frontal view images and 4 profile view images, so a total of 14 images are in each and every folder. For training the siamese neural network I randomly choose 350 folders and for the validation set, I randomly choose 100 folders and, the rest of the 50 folders were kept for the test set. The test set remained isolated the whole time, I just it at last just to verify if my model has accuracy in the out-of-sample examples.
 
 ### Short Description of Each Source Code File
@@ -42,4 +42,20 @@ If you do not have Python installed yet, it is highly recommended that you insta
   <img src="images/enroll_result_1.png" width=250>
 </p>
 
+### Siamese Neural Network Training Description
+The siamese neural network, I trained did not converge fully. Though the test set accuracy is 83.267%, the lowest validation loss is 0.32531. I also used learning rate decay to control the oscillator. <br /> 
 
+Training loss Vs Validation loss graph <br /> 
+<p align="center">
+  <img src="images/training_loss_vs_validation_loss.png" width=750>
+</p>
+
+Training accuracy Vs Validation accuracy graph <br /> 
+<p align="center">
+  <img src="images/training_accuracy_vs_validation_accuracy.png" width=750>
+</p>
+
+Learning rate decay graph <br />
+<p align="center">
+  <img src="images/learning_rate_decay.png" width=750>
+</p>
