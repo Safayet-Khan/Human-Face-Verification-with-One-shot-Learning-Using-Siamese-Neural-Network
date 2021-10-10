@@ -41,7 +41,7 @@ If you do not have Python installed yet, it is highly recommended that you insta
 
 5. **siamese_enroll.py**- This file is responsible for testing new enrollment data. "siamese_enroll_dataset" folder contains the enrolled images. "siamese_input_image" folder contains the captured test image. "siamese_input_image" folder image is compared with "siamese_enroll_dataset" folder images. If a similarity between images is found, then it is reported. I used my own image to test the network. Note that my data is not used in training, validation, or test set.
 <p align="center">
-  <img src="images/enroll_result_1.png" width=250>
+  <img src="images/enroll_result.png" width=250>
 </p>
 
 ### Siamese Neural Network Training Description
