@@ -27,12 +27,16 @@ If you do not have Python installed yet, it is highly recommended that you insta
 3. **siamese_model.py**- The siamese network I used have almost 13M trainable parameter. The CNN architecture used in this repository is similar to the [VGG16](https://arxiv.org/pdf/1409.1556.pdf) but the model I used has less trainable params(13M) compared to the original VGG16(138.4M) model and the model I used also have BatchNormalization layers for regularization purposes. Written in [this medium article](https://medium.com/swlh/siamese-network-for-facial-recognition-5bd33be9e381) about siamese network and visualizing its general architecture. 
 
 >"Siamese Network is a One-shot classifier with two mirror-image subnetworks to rank similarity or dissimilarity between the two inputs using Similarity score."
-
 <p align="center">
   <img src="images/siamese_model.png" width=500>
 </p>
 
 
-4. **siamese_testdata.py**
+4. **siamese_testdata.py**- From the isolated test set, randomly 1500 duplets of positive examples and negative examples are selected. Those 1500 duplets are used to verify siamese model accuracy in the out-of-sample examples. The accuracy score from the test set is 83.267%. The confusion matrix for the test data set.
+<p align="center">
+  <img src="images/confusion_matrix.png" width=400>
+</p>
 
 5. **siamese_enroll.py**
+
+
