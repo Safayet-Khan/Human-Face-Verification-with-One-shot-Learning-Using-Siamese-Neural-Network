@@ -15,3 +15,14 @@ If you do not have Python installed yet, it is highly recommended that you insta
 
 ### Splitting CFPW dataset
 [CFPW dataset](http://www.cfpw.io/) contains images of celebrities in frontal and profile views. There are 500 celebrities' images in 500 folders. All of the folders have 10 frontal view images and 4 profile view images, so a total of 14 images are in each and every folder. For training the siamese neural network I randomly choose 350 folders and for the validation set, I randomly choose 100 folders and, the rest of the 50 folders were kept for the test set. The test set remained isolated the whole time, I just it at last just to verify if my model has accuracy in the out-of-sample examples.
+
+### Short Description of Each Source Code File
+1. **siamese_augmentation.py**- As the input in the siamese network needs to be given as duplets of positive examples (same class) or negative examples (different class), I was unable to use the Keras image augmentation method. So, I wrote the **siamese_augmentation.py** file. This file and its function are responsible for the augmentation of the input duplets in the training data. Example of a positive duplet image. 
+<p align="center">
+  <img src="images/image_augmentation_example.png.png" width=175>
+</p>
+
+2. **siamese_function.py**
+3. **siamese_model.py**
+4. **siamese_testdata.py**
+5. **siamese_enroll.py**
